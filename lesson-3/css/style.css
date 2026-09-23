@@ -172,10 +172,11 @@ textarea {
       "nav    footer footer  ad"; */
     /* Mobile first approach */
     grid-template-areas:
-      "header header header"
-      "nav main main"
-      "nav sidebar sidebar"
-      "footer footer ad";
+      "header header"
+      "nav nav"
+      "sidebar ad"
+      "main main"
+      "footer footer";
   /* STEP 12a: Set gutters between column tracks with column-gap */
     
   /* STEP 12b: Set gutters between row tracks with row-gap */
@@ -225,7 +226,7 @@ textarea {
     }
   }
 
-  
+
 
 /* ==========================================================================
    Helper classes
