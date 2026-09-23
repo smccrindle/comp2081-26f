@@ -162,7 +162,8 @@ textarea {
   /* STEP 7: Set an element as the grid container with display: grid; */
     display: grid;
   /* STEP 8: Define the columns for the grid with grid-template-columns - use a space-separated list of widths */
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    /* grid-template-columns: 1fr 2fr 1fr 1fr; */
+    /* Commenting out the above so we can use media queries for Lab (see media queries below... */
   /* STEP 9: Define the rows for the grid with grid-template-rows - use a space-separated list of widths or auto */
     grid-template-rows: auto;
   /* STEP 10: Designate the cells of the resulting grid in terms of user-named content areas - repeat names for merged cells */
@@ -216,16 +217,28 @@ textarea {
     grid-area: ad;
   } 
 
-  /* Larger screen layout */
+  /* Medium screen layout */
   @media screen and (min-width: 768px) {
     .container {
       grid-template-areas:
-      "header header header  header"
-      "nav    main   sidebar sidebar"
-      "nav    footer footer  ad";
+      "header header"
+      "nav sidebar"
+      "nav ad"
+      "nav main"
+      "footer footer";
     }
   }
 
+  /* Large screen layout */
+  @media screen and (min-width: 1024px) {
+    .container {
+      grid-template-areas:
+      "header header header"
+      "nav sidebar ad"
+      "nav main main"
+      "footer footer footer";
+    }
+  }
 
 
 /* ==========================================================================
