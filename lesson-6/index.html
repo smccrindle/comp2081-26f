@@ -12,15 +12,18 @@
 	</head>
 	<body>
 <!-- STEP 3: Build a fluid or a fixed-width container for proper alignment and padding of content-->
-		<div class="container">
+		<div class="container mt-5 pt-5">
 <!-- STEP 4: Build out your basic page-level containers, HEADER, MAIN, FOOTER,and add an H1 inside the HEADER to begin the document outline -->
 			<header>
-				<nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
-					<a href="#" class="navbar-brand">
+				<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+					<a href="#" class="navbar-brand ms-1">
 						<img src="img/bootstrap-solid.svg" alt="Bootstrap logo" width="30" height="24" class="d-inline-block align-top" /> Bootstrap
 					</a>
-					<div class="navbar-collapse">
-						<ul class="navbar-nav">
+					<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div id="navbarNav" class="collapse navbar-collapse">
+						<ul class="navbar-nav me-auto">
 							<li class="nav-item">
 								<a class="nav-link" href="#">Home</a>
 							</li>
@@ -33,13 +36,37 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#">Orders</a>
 							</li>
+							<li class="nav-item dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#" class="dropdown-item">Our People</a>
+									</li>
+									<li>
+										<a href="#" class="dropdown-item">Our History</a>
+									</li>
+									<li>
+										<a href="#" class="dropdown-item">Our Future</a>
+									</li>
+									<li>
+										<hr class="dropdown-divider" />
+									</li>
+									<li>
+										<a href="#" class="dropdown-item">Careers</a>
+									</li>
+								</ul>
+							</li>
 						</ul>
+						<form class="d-flex" role="search">
+							<input type="search" class="form-control me-1" placeholder="Search…" aria-label="Search" />
+							<button class="btn btn-outline-light me-2" type="submit">Search</button>
+						</form>
 					</div>
 				</nav>
 			</header>
 <!-- STEP 5: Build out a NAV element with the classes .navbar - add .navbar-light, and .bg-light to set the text and background colors - include role="navigation" for accessibilty -->
 <!-- STEP 6: Construct the branding image and text using .navbar-brand with an A element and .d-inline-block, and .align-top with an img element (point the src to img/bootstrap-solid.svg) -->
-<!-- STEP 7: Include a series of navigation links using a UL element (right after the branding), contained by a DIV -->
+<!-- STEP 7: Include a series of navigation links using a UL element (right after the branding), contained by a DIV -->2
 <!-- STEP 8: Add .navbar-nav to the UL, .nav-item to each LI, and .nav-link to each A -->
 <!-- STEP 9: Add .navbar-expand-lg to the parent NAV element to have the links arrange horizontally for large screens (or sm | md | xl for other screen size breakpoints) -->
 <!-- STEP 10: Add .navbar-collapse to the DIV element to set up the list to work on small screens, then add .collapse to hide the links altogether below the breakpoint set in STEP 9 -->
